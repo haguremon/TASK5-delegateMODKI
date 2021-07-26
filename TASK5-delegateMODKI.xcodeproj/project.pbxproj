@@ -13,6 +13,7 @@
 		CF9CD2A426AF6F750085458A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9CD2A226AF6F750085458A /* Main.storyboard */; };
 		CF9CD2A626AF6F770085458A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9CD2A526AF6F770085458A /* Assets.xcassets */; };
 		CF9CD2A926AF6F770085458A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9CD2A726AF6F770085458A /* LaunchScreen.storyboard */; };
+		CF9CD2B126AF6FB70085458A /* ArithmeticOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CD2B026AF6FB70085458A /* ArithmeticOperator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CF9CD2A526AF6F770085458A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF9CD2A826AF6F770085458A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF9CD2AA26AF6F770085458A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9CD2B026AF6FB70085458A /* ArithmeticOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticOperator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CF9CD29C26AF6F750085458A /* AppDelegate.swift */,
 				CF9CD29E26AF6F750085458A /* SceneDelegate.swift */,
 				CF9CD2A026AF6F750085458A /* ViewController.swift */,
+				CF9CD2B026AF6FB70085458A /* ArithmeticOperator.swift */,
 				CF9CD2A226AF6F750085458A /* Main.storyboard */,
 				CF9CD2A526AF6F770085458A /* Assets.xcassets */,
 				CF9CD2A726AF6F770085458A /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF9CD2A126AF6F750085458A /* ViewController.swift in Sources */,
+				CF9CD2B126AF6FB70085458A /* ArithmeticOperator.swift in Sources */,
 				CF9CD29D26AF6F750085458A /* AppDelegate.swift in Sources */,
 				CF9CD29F26AF6F750085458A /* SceneDelegate.swift in Sources */,
 			);
