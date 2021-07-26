@@ -10,8 +10,8 @@ import UIKit
 //委譲するプロトコルで宣言
 //必要な条件
 protocol ArithmeticOperatorDelegate: AnyObject{
-    func number1() -> Any //もっといい取得の方法があるはず・・・
-    func number2() -> Any //throw使うのも面白いけど。。。トライでやるとコード量増える
+    func number1() -> Double? //もっといい取得の方法があるはず・・・
+    func number2() -> Double? //throw使うのも面白いけど。。。トライでやるとコード量増える
     //ゲットセットでよりよくできそうな気がするけどわからへん
 }
 
@@ -26,12 +26,12 @@ class ArithmeticOperator {
     }
     //割り算をする処理
     func dividedBy(resultLabel: UILabel){
-        guard let divisor = delegate?.number1() as? Double else {
+        guard let divisor = delegate?.number1() else {
            //Any型をダウンキャストできなかった場合ここがよばれる
             return dialogAlert(message: "割られる数を入力してください")
         
         }
-        guard let  dividend = delegate?.number2() as? Double else {
+        guard let  dividend = delegate?.number2() else {
             
             return dialogAlert(message: "割る数を入力してください")
         
@@ -47,27 +47,28 @@ class ArithmeticOperator {
     }
     //ここから下はいらないけど作った色々とカスタマイズできるの最高
     func Addition(resultLabel: UILabel){
-        guard let number1 = delegate?.number1() as? Double,
-              let  number2 = delegate?.number2() as? Double else { return }
+        guard let number1 = delegate?.number1(),
+              let  number2 = delegate?.number2() else { return }
         
         resultLabel.text = String(number1 + number2)
     }
     func Subtraction(resultLabel: UILabel){
-        guard let number1 = delegate?.number1() as? Double,
-              let  number2 = delegate?.number2() as? Double else { return }
+        guard let number1 = delegate?.number1(),
+              let  number2 = delegate?.number2() else { return }
         
         resultLabel.text = String(number1 - number2)
     }
     func Multiplication(resultLabel: UILabel){
-        guard let number1 = delegate?.number1() as? Double,
-              let  number2 = delegate?.number2() as? Double else { return }
+        guard let number1 = delegate?.number1(),
+              let  number2 = delegate?.number2() else { return }
         
         resultLabel.text = String(number1 * number2)
     }
     func remainder(resultLabel: UILabel){
-        guard let number1 = delegate?.number1() as? Int,
-              let  number2 = delegate?.number2() as? Int else { return }
-        
-        resultLabel.text = String(number1 % number2)
+        guard let number1 = delegate?.number1(),
+              let  number2 = delegate?.number2() else { return }
+         let intValue1 = Int(number1)
+         let intValue2 = Int(number2)
+        resultLabel.text = String(intValue1 % intValue2)
     }
 }

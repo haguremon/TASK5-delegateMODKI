@@ -16,46 +16,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIq-1A-oAR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIq-1A-oAR">
                                 <rect key="frame" x="186" y="214" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EJ-1w-Ac2">
-                                <rect key="frame" x="186" y="149" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiP-Lz-bvb">
+                                <rect key="frame" x="78" y="74" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIP-hQ-QVN">
+                                <rect key="frame" x="236" y="74" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLZ-Sv-sKS">
+                                <rect key="frame" x="28" y="156" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="＋"/>
+                                <connections>
+                                    <action selector="AdditionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yFg-zs-8ye"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8j-4K-5Df">
+                                <rect key="frame" x="111" y="156" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="−"/>
+                                <connections>
+                                    <action selector="subtractionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XB1-fR-Nac"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcJ-7M-6xy">
+                                <rect key="frame" x="198" y="156" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="×"/>
+                                <connections>
+                                    <action selector="multiplicationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rCh-JN-tan"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFh-mf-WvQ">
+                                <rect key="frame" x="328" y="157" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="余り"/>
+                                <connections>
+                                    <action selector="remainderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Zh-ce-bNN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EJ-1w-Ac2">
+                                <rect key="frame" x="269" y="156" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="÷"/>
                                 <connections>
                                     <action selector="dividedByButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q5I-1H-G1Z"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiP-Lz-bvb">
-                                <rect key="frame" x="78" y="74" width="97" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="Hz4-fI-1J9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIP-hQ-QVN">
-                                <rect key="frame" x="236" y="74" width="97" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="9EJ-1w-Ac2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="4xu-H6-bIo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zIP-hQ-QVN" secondAttribute="trailing" constant="81" id="5CD-2L-rwh"/>
-                            <constraint firstItem="9EJ-1w-Ac2" firstAttribute="leading" secondItem="UIq-1A-oAR" secondAttribute="leading" id="6K9-in-gYg"/>
-                            <constraint firstItem="HiP-Lz-bvb" firstAttribute="top" secondItem="zIP-hQ-QVN" secondAttribute="top" id="EZb-Vw-wQ1"/>
-                            <constraint firstItem="zIP-hQ-QVN" firstAttribute="leading" secondItem="HiP-Lz-bvb" secondAttribute="trailing" constant="61" id="Q3m-AP-cQK"/>
-                            <constraint firstItem="UIq-1A-oAR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YMN-08-xTm"/>
-                            <constraint firstItem="HiP-Lz-bvb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cJT-Up-TbS"/>
-                            <constraint firstItem="UIq-1A-oAR" firstAttribute="top" secondItem="9EJ-1w-Ac2" secondAttribute="bottom" constant="35" id="cVr-ai-rS6"/>
-                            <constraint firstItem="HiP-Lz-bvb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="gYF-sS-mYc"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="number1TextField" destination="HiP-Lz-bvb" id="iJw-v6-fJR"/>

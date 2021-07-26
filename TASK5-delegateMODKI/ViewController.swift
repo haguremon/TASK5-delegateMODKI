@@ -23,26 +23,40 @@ class ViewController: UIViewController {
         number2TextField.keyboardType = .decimalPad
     }
     
+    @IBAction func AdditionButton(_ sender: UIButton) {
+        arithmeticOperator.Addition(resultLabel: resultLabel)
+    
+    }
+    @IBAction func subtractionButton(_ sender: UIButton) {
+        arithmeticOperator.Subtraction(resultLabel: resultLabel)
+    
+    }
+    @IBAction func multiplicationButton(_ sender: UIButton) {
+        arithmeticOperator.Multiplication(resultLabel: resultLabel)
+    
+    }
     @IBAction func dividedByButton(_ sender: UIButton) {
+        
         arithmeticOperator.dividedBy(resultLabel: resultLabel)
+    
     }
     
+    @IBAction func remainderButton(_ sender: UIButton) {
+        arithmeticOperator.remainder(resultLabel: resultLabel)
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 }//ここでの記述量を減らしたい//Any型はあまり使わない方がいいが・・・
     
 extension ViewController: ArithmeticOperatorDelegate {
-    func number1() -> Any {
-        guard let divisor = Int(number1TextField.text!) else {
-            return ""
-        }
+    func number1() -> Double? {
+        let divisor = Double(number1TextField.text!)
         return divisor
     }
-    func number2() -> Any {
-        guard let dividend = Int(number2TextField.text!) else {
-            return ""
-        }
+    func number2() -> Double? {
+        let dividend = Double(number2TextField.text!)
         return dividend
     }
 }
