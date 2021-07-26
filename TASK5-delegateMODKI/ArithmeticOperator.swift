@@ -11,13 +11,14 @@ import UIKit
 //必要な条件
 protocol ArithmeticOperatorDelegate: AnyObject{
     func number1() -> Any //もっといい取得の方法があるはず・・・
-    func number2() -> Any
+    func number2() -> Any //throw使うのも面白いけど。。。トライでやるとコード量増える
+    //ゲットセットでよりよくできそうな気がするけどわからへん
 }
 
-//処理を委任するクラス
+//処理を委任するクラス//もっと柔軟性のあるクラスにしたい...//他のControllerでも使えるから良き
 class ArithmeticOperator {
     weak var delegate: ArithmeticOperatorDelegate?
-    weak var viewController: ViewController?
+    weak var viewController: UIViewController?//よりはUIViewControllerの方がいいか？
     func dialogAlert(message: String) {
         let alert = UIAlertController(title: "Task5", message: message, preferredStyle: .alert )
         alert.addAction(UIAlertAction(title: "ok", style: .default))

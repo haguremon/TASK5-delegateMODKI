@@ -58,8 +58,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dividendtextField" destination="zIP-hQ-QVN" id="gro-G8-XQC"/>
-                        <outlet property="divisortextField" destination="HiP-Lz-bvb" id="xIb-tN-jbM"/>
+                        <outlet property="number1TextField" destination="HiP-Lz-bvb" id="iJw-v6-fJR"/>
+                        <outlet property="number2TextField" destination="zIP-hQ-QVN" id="NLQ-1T-ham"/>
                         <outlet property="resultLabel" destination="UIq-1A-oAR" id="PyD-0K-Hml"/>
                     </connections>
                 </viewController>
