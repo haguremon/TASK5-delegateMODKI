@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         arithmeticOperator.delegate = self
-        arithmeticOperator.viewController = self
         number1TextField.keyboardType = .decimalPad
         number2TextField.keyboardType = .decimalPad
     }

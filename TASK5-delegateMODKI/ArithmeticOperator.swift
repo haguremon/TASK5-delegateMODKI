@@ -17,12 +17,13 @@ protocol ArithmeticOperatorDelegate: AnyObject{
 
 //処理を委任するクラス//もっと柔軟性のあるクラスにしたい...//他のControllerでも使えるから良き
 class ArithmeticOperator {
-    weak var delegate: ArithmeticOperatorDelegate?
-    weak var viewController: UIViewController?//よりはUIViewControllerの方がいいか？
+   typealias VCArithmeticOperatorDelegate = ArithmeticOperatorDelegate & UIViewController
+    weak var delegate: VCArithmeticOperatorDelegate?
+//よりはUIViewControllerの方がいいか？
     func dialogAlert(message: String) {
         let alert = UIAlertController(title: "Task5", message: message, preferredStyle: .alert )
         alert.addAction(UIAlertAction(title: "ok", style: .default))
-        self.viewController?.present(alert, animated: true)
+        self.delegate?.present(alert, animated: true)
     }
     //割り算をする処理
     func dividedBy(resultLabel: UILabel){
